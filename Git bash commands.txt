@@ -32,6 +32,7 @@ see only specifics of changes : 'git log --pretty=format:"%h, %an, %ae,..."'
 add the modified into previous commit: git commit --amend (and press enter)
 add remote-website to your remote list : git remote add REMOTE_NAME https://ANY_LINK_OF_REPOSITORY
 see list of remote : git remote
+delete any remote : remote rm REMOTE_NAME
 push from any branch (use for first push) : git push -u REMOTE_NAME BRANCH_NAME
 push (not for first time) : git push
 set alias , for eg "status" : git config --global alias.st status
