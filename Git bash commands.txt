@@ -1,0 +1,54 @@
+initialize git : git init
+delete initialization : rm -rf .git
+see git status : git status
+add to staged : "git add ." or "git add --a"
+commit staged_files : git commit -m "COMMENT_HERE_ABOUT_CHANGE" 
+directly commit modified_files: git commit -a -m "COMMENT_HERE_ABOUT_CHANGE"
+clone from github : git clone https://ANY_LINK_OF_REPOSITORY "DIR_NAME_TO_BE_DOWNLOADED"
+view all changes till now: git log
+remove from tracked files : "git --rm cached FILE_NAME"
+difference between modified & staged : git diff
+difference between staged & working (i.e previous commit) : git diff --staged
+see overview of every commit : git log
+see changes in one line of every commit : git log --pretty=oneline
+see changes with author and comment : git log --pretty=full
+see changes in short in every commit : git log --stat
+see detailed changes in every commit : git log -p
+see changes of last x days : git log --since=x.days
+see changes of last x weeks : git log --since=x.weeks
+see changes of last x months : git log --since=x.months
+see changes of last x years : git log --since=x.years
+see the last commit : git log -p -1
+see only specifics of changes : 'git log --pretty=format:"%h, %an, %ae,..."'
+    %H -> hash
+    %h -> abbreviated hash
+    %T -> hash tree
+    %t -> abbreviated hash tree
+    %an -> author name
+    %ae -> author email
+    %cn -> committer name
+    %ce -> committer email
+    and so on...
+add the modified into previous commit: git commit --amend (and press enter)
+add remote-website to your remote list : git remote add REMOTE_NAME https://ANY_LINK_OF_REPOSITORY
+see list of remote : git remote
+push from any branch (use for first push) : git push -u REMOTE_NAME BRANCH_NAME
+push (not for first time) : git push
+set alias , for eg "status" : git config --global alias.st status
+set alias , for eg "commit" : git config --global alias.cm commit
+set alias to see last commit : git config --global alias.last 'log -p -1'
+create a new branch : git checkout -b BRANCH_NAME
+see list of branches : git branch
+go back to master branch : git checkout master
+switch to any branch : git checkout BRANCH_NAME
+merge changes of any branch to master (first switch to master) : git merge BRANCH_NAME
+delete any branch : git branch -d BRANCE_NAME
+delete all branches except current branch (this also deletes master branch, so use this command in master only): "git branch | grep -v "main" | xargs git branch -D"
+see list of merged branch : git branch --merged
+see list of not merged branch : git branch --no-merged
+receive metadata from remote : git fetch
+receive updated repository : git pull
+
+
+//commands typing credit: PERIS RAJ KC
+//reference : CodeWithHarry 'Git and Github video'
